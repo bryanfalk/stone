@@ -128,6 +128,10 @@ async function loadPage() {
 
 loadPage();
 
+/**
+ * Adds target=_blank to links
+ */
+
 const links = document.querySelectorAll('a');
 
 links.forEach(link => {
