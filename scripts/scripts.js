@@ -110,6 +110,10 @@ async function loadLazy(doc) {
   loadFonts();
 }
 
+links.forEach(link => {
+  link.setAttribute('target', '_blank');
+});
+
 /**
  * Loads everything that happens a lot later,
  * without impacting the user experience.
