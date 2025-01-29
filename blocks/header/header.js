@@ -165,6 +165,3 @@ export default async function decorate(block) {
   block.append(navWrapper);
 }
 
-/**
- * Adds target=_blank to links
- */
