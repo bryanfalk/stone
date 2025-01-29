@@ -54,12 +54,4 @@ export default async function decorate(block) {
   }
 }
 
-/**
- * Adds target=_blank to links
- */
 
-const links = document.querySelectorAll('a');
-
-links.forEach(link => {
-  link.setAttribute('target', '_blank');
-});
