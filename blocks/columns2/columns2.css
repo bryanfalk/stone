@@ -5,6 +5,7 @@
 
 .columns img {
   width: 100%;
+    bgcolor: cccccc;
 }
 
 .columns > div > div {
