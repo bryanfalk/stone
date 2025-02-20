@@ -29,6 +29,17 @@ function buildHeroBlock(main) {
 }
 
 /**
+ * Adds target=_blank to links
+ */
+function linktarget() {
+const links = document.querySelectorAll('a');
+
+links.forEach(link => {
+  link.setAttribute('target', '_blank');
+});
+}
+
+/**
  * load fonts.css and set a session storage flag
  */
 async function loadFonts() {
@@ -105,6 +116,7 @@ async function loadLazy(doc) {
 
   loadHeader(doc.querySelector('header'));
   loadFooter(doc.querySelector('footer'));
+  linktarget(doc.querySelector('linktarget'));
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
@@ -127,13 +139,3 @@ async function loadPage() {
 }
 
 loadPage();
-
-/**
- * Adds target=_blank to links
- */
-
-const links = document.querySelectorAll('a');
-
-links.forEach(link => {
-  link.setAttribute('target', '_blank');
-});
