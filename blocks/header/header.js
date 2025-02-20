@@ -132,6 +132,11 @@ export default async function decorate(block) {
     brandLink.closest('.button-container').className = '';
   }
 
+  const govLinks = document.querySelectorAll('a[href$=".gov"]');
+  govLinks.forEach(function(link) {
+  link.target = "_blank"; // This will open the link in a new tab
+  });
+
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
