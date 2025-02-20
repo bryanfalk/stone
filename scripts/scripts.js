@@ -32,11 +32,11 @@ function buildHeroBlock(main) {
  * Adds target=_blank to links
  */
 function linktarget() {
-const links = document.querySelectorAll('a');
+  const links = document.querySelectorAll('a');
 
-links.forEach(link => {
-  link.setAttribute('target', '_blank');
-});
+  links.forEach(link => {
+    link.setAttribute('target', '_blank');
+  });
 }
 
 /**
